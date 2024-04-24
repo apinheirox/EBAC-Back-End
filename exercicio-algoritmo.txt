@@ -1,0 +1,38 @@
+Algoritmo Rotina_Ao_Acordar
+    // Variáveis
+    Var
+        acordei: booleano
+        escovei_os_dentes: booleano
+        tomei_banho: booleano
+        fiz_cafe: booleano
+        tomei_cafe: booleano
+    
+    // Inicialização
+    acordei <- Falso
+    escovei_os_dentes <- Falso
+    tomei_banho <- Falso
+    fiz_cafe <- Falso
+    tomei_cafe <- Falso
+    
+    // Passos da Rotina
+    Escreva("Acordar.")
+    acordei <- Verdadeiro
+    
+    Escreva("Escovar os dentes.")
+    escovei_os_dentes <- Verdadeiro
+    
+    Escreva("Tomar banho.")
+    tomei_banho <- Verdadeiro
+    
+    Escreva("Fazer café.")
+    fiz_cafe <- Verdadeiro
+    
+    Escreva("Tomar café da manhã.")
+    tomei_cafe <- Verdadeiro
+    
+    // Verificação da Rotina Completa
+    Se acordei E escovei_os_dentes E tomei_banho E fiz_cafe E tomei_cafe Então
+        Escreva("Rotina ao acordar completa!")
+    Senão
+        Escreva("Ops! Parece que algo ficou faltando na rotina.")
+    FimSe
