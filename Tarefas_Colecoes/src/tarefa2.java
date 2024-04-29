@@ -1,5 +1,5 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class SeparadorGenero {
@@ -15,28 +15,35 @@ public class SeparadorGenero {
         // Separando os nomes e sexos usando a vírgula como delimitador
         String[] dados = input.split(",");
 
-        // Criando um mapa para armazenar o número de pessoas por gênero
-        Map<Character, Integer> generos = new HashMap<>();
-        generos.put('M', 0); // Inicialmente, zero homens
-        generos.put('F', 0); // Inicialmente, zero mulheres
+        // Criando listas para armazenar os nomes separados por gênero
+        List<String> masculino = new ArrayList<>();
+        List<String> feminino = new ArrayList<>();
 
-        // Iterando sobre os dados e contando o número de pessoas por gênero
+        // Iterando sobre os dados e armazenando os nomes nas listas apropriadas
         for (int i = 0; i < dados.length; i += 2) {
+            String nome = dados[i];
             char sexo = dados[i + 1].charAt(0);
             if (sexo == 'M' || sexo == 'm') {
-                generos.put('M', generos.get('M') + 1); // Incrementando o contador de homens
+                masculino.add(nome);
             } else if (sexo == 'F' || sexo == 'f') {
-                generos.put('F', generos.get('F') + 1); // Incrementando o contador de mulheres
+                feminino.add(nome);
             }
         }
 
-        // Exibindo o número de pessoas por gênero no console
-        System.out.println("Número de pessoas por gênero:");
-        System.out.println("Masculino: " + generos.get('M'));
-        System.out.println("Feminino: " + generos.get('F'));
+        // Exibindo os nomes separados por gênero no console
+        System.out.println("Pessoas do gênero masculino:");
+        for (String nome : masculino) {
+            System.out.println(nome);
+        }
+
+        System.out.println("\nPessoas do gênero feminino:");
+        for (String nome : feminino) {
+            System.out.println(nome);
+        }
 
         // Fechando o scanner
         scanner.close();
     }
 }
+
 
