@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author Cezar
+ *
+ */
+module coleção {
+}
